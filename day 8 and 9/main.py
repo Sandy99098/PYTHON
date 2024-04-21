@@ -11,4 +11,5 @@ print(int(a)+int(b)) # a and b is converted to int , as the string that hold is 
 a=1.32 ;
 b=2;
 print( int (a )+ float (b)) # here a is converted into float and b is converted into float
+print( int (a )+ float (b)) # here a is converted into float and b is converted into float
 
