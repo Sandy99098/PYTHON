@@ -5,7 +5,7 @@ import io  # Import the io module
 
 def fetch_weather():
     # Get weather data from OpenWeatherMap API
-    api_key = 'enter your api'
+    api_key = 'enter your api '
     latitude = '28.2139'  # Latitude of Pokhara, Nepal
     longitude = '83.9922'  # Longitude of Pokhara, Nepal
     url = f'http://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={api_key}&units=metric'
