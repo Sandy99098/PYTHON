@@ -1,11 +1,11 @@
 pip
+
 pip instal --upgrade pip 
 pip install pandas 
 
 pip install scikit-learn 
 
-day 5:
-learning comment and denoted by #
+
  \n escaping sequence  character 
 
  
