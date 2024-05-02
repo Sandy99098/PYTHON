@@ -1,0 +1,45 @@
+
+A virtual environment in Python is a self-contained directory tree that includes a Python installation and a number of additional packages. Different applications can then use different virtual environments. To create a virtual environment, you can use the venv module that comes pre-installed with Python 3.3 and above1.
+
+<!-- to activate virtual environment -->
+python -m venv myenv
+
+<!-- to activate using powershell -->
+.\myenv\Scripts\activate.ps1
+<!-- to activate -->
+.\myenv\Scripts\activate
+
+<!-- pandas install -->
+-m venv pandas1-5
+.\pandas1-5\Scripts\activate
+pip install pandas
+
+
+
+<!-- deactivate  -->
+(pandas1-5) $
+deactivate
+
+
+
+<!--  requirements.txt -->
+<!-- To create a requirements file containing the packages installed in  environment: -->
+ touch main.py <!--for macos -->
+<!-- for windows -->
+type nul > main.py
+
+
+<!-- 
+To create a requirements file containing the packages installed in your environment: -->
+pip freeze > requirements.txt
+
+<!-- To install packages from the requirements file: -->
+
+pip install -r requirements.txt
+
+# Create requirements.txt
+pip freeze > requirements.txt
+
+# Install packages from requirements.txt
+pip install -r requirements.txt
+
