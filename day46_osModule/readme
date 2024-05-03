@@ -1,0 +1,54 @@
+The os module in Python provides a way to interact with the operating system. It allows you to perform various operating system-related tasks such as navigating the file system, working with files and directories, manipulating paths, and executing system commands. Here's an overview of some commonly used functions and constants in the os module:
+
+Common Functions:
+Working with Files and Directories:
+os.getcwd(): Get the current working directory.
+os.chdir(path): Change the current working directory to the specified path.
+os.listdir(path='.'): List the files and directories in the specified directory.
+os.mkdir(path): Create a new directory with the specified path.
+os.makedirs(path): Create a directory and all its parent directories if they don't exist.
+os.remove(path): Remove (delete) the file at the specified path.
+os.rmdir(path): Remove (delete) the directory at the specified path.
+os.removedirs(path): Remove directories recursively, starting from the specified path.
+os.rename(src, dst): Rename the file or directory from src to dst.
+Path Manipulation:
+os.path.join(path1, path2, ...): Join one or more path components intelligently.
+os.path.abspath(path): Return the absolute version of the specified path.
+os.path.dirname(path): Return the directory name of the specified path.
+os.path.basename(path): Return the base name of the specified path.
+System Information:
+os.environ: A mapping object representing the user's environment variables.
+os.getlogin(): Get the name of the user logged in on the controlling terminal of the process.
+os.getpid(): Get the current process ID.
+os.getuid(): Get the current user ID.
+Executing System Commands:
+os.system(command): Execute the command in a subshell (shell command execution).
+Miscellaneous:
+os.name: The name of the operating system dependent module imported. It could be 'posix', 'nt', 'os2', 'ce', 'java', or 'riscos'.
+os.sep: The separator used in file paths ('/' on Unix-like systems, '\' on Windows).
+Example Usage:
+python
+Copy code
+import os
+
+# Get the current working directory
+current_dir = os.getcwd()
+print("Current working directory:", current_dir)
+
+# List files and directories in the current directory
+files_and_dirs = os.listdir()
+print("Files and directories in the current directory:", files_and_dirs)
+
+# Create a new directory
+new_dir_path = os.path.join(current_dir, "new_directory")
+os.mkdir(new_dir_path)
+print("New directory created:", new_dir_path)
+
+# Change directory
+os.chdir(new_dir_path)
+print("Changed to new directory:", os.getcwd())
+
+# Remove the new directory
+os.chdir(current_dir)  # Change back to the original directory
+os.rmdir(new_dir_path)
+print("New directory removed")
