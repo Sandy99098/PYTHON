@@ -28,3 +28,4 @@ b=34;
 print(b);
 a="3241414141"; # string 
 print(a);
+a= input("Enter the number for a ")
