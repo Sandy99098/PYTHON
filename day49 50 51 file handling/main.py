@@ -14,5 +14,5 @@
 # f.close
 
 
-with open('myfile.txt','a') as f:
-    f.write("Hey i am doing good ")
+# with open('myfile.txt','a') as f:
+#     f.write("Hey i am doing good ")
