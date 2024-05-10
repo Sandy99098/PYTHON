@@ -1,5 +1,5 @@
 # Your Python code goes here
-#  Inheritance in Python 
+#  Inheritance in Python  
 class Employee:
     def __init__(self,name,occupation):
         self.n=name 
