@@ -6,4 +6,4 @@
 a=[1,2,3]
 b=[1,2,3]
 print(a is b) #compares the identity
-print(b == a) # compare the value 
+print(b == a) # compare the value
