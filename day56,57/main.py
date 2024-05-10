@@ -7,7 +7,7 @@
 #       Occupation ="Developer"
 #       Income=9998
 
-# a=Person()
+# a=Person() 
 # print(a.Name,a.Income,a.Occupation)
 
 class Person:
