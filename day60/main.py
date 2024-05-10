@@ -61,7 +61,7 @@ class Demo:
     def __init__(self,value):
         self.v=value
     def info(self):
-        print(f"The value is {self.v} ")
+        print(f"The value is {self.v} ") 
         
     @property
     def new_value(self):
