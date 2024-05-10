@@ -1,6 +1,6 @@
 # Your Python code goes here
 
-#ACess specifers  or modifiers in Python
+#ACess specifers  or modifiers in Python 
 
 class hey:
     def __init__(self):
