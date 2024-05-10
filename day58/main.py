@@ -14,9 +14,9 @@
 class person:
     #  # Default constructor
     # def __init__(self,n="hari",o="Coder"):
-        # self.name=n
-        # self.occ=o
-    #    print("I am a Designer")
+    #     self.name=n
+    #     self.occ=o
+    #     print("I am a Designer")
     
     #Paramaterized constructor
     def __init__(self,n,o): 
@@ -26,7 +26,8 @@ class person:
         
     def info(self):
         print(f" I am {self.name} and my I am  {self.occ}")
-
+# p = person()
+# p.info()
 a=person("Sandeep","Developer") # constructor ma 3 ta pass vaaxa 1ta a obj and other are paranaters
 a.info()
-p=person()
+# print(p)
