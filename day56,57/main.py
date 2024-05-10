@@ -26,3 +26,16 @@ b.Occupation=" Developer  "
 b.Income= 90339
 b.info()
 
+
+
+# example 2
+class Hello:
+    name="Sandy "
+    def info(self):
+        print(f" Hello {self.name}")
+       
+m=Hello()
+m.info()
+
+m.name="saan"
+m.info()

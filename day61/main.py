@@ -13,7 +13,7 @@ class Programming(Employee):
     def showLanguages(self):
         print(f" The Default language is Python ")
     
-a=Employee("san","Designer")
+a=Employee("san","Designer") 
 a.info()
 
 a=Employee("sandy","Artist")
