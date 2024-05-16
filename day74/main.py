@@ -13,11 +13,11 @@ class Circle(Shape):
         super().__init__(radius, radius)  # Initialize the base class with the same radius for x and y
 
     def area(self):
-        return 3.14 * self.radius * self.radius  # Correct area calculation for a circle
+        return 3.14 *super().area()  # Correct area calculation for a circle
 
 s = Shape(1, 3)
 c = Circle(7)
-print(s.area())  
+print("super class",s.area())  
 
-print(c.area())  
+print(f" child class{c.area()}")  
 
