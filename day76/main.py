@@ -34,3 +34,54 @@ for pdf in  pdfs:
             merger.add_page(reader.pages[page_num])
 with  open ( 'merged.odf','wb') as output_file:
     merger.write(output_file)
+    
+    
+#  for splitting the pdf 
+
+with open ('sample.pdf','rb') as file :
+    reader= PyPDF2.PdfReader(file)
+    for page_num in range(len(reader.pages)):
+        writer=PyPDF2.PdfFileWriter()
+        writer.add_page(reader.pages[page_num])
+        
+        output_filename=f'page_{page_num + 1}.pdf'
+        with open(output_filename,'wb') as output_file:
+            writer.write(output_file)
+            
+            
+#  adding watermark to the pdf 
+
+with open('sample.pdf','rb') as file ,open('watermark.pdf','rb') as watermark_file:
+    reader=PyPDF2.PdfReader(file)
+    watermark_reader = PyPDF2.PdfReader(watermark_file)
+    watermark_page=watermark_reader.page[0]
+    
+    writer = PyPDF2.PdfWriter()
+    
+    for page_num in range (len(reader.pages)):
+        page=reader.pages[page_num]
+        page.merge_page(watermark_page)
+        writer.add_page(page)
+        
+    with open('watermarked_output.pdf','wb') as output_file:
+        writer.write(output_file)
+    
+    
+    
+    
+#  for encrypting the pdf
+
+
+import PyPDF2
+
+with open('sample.pdf', 'rb') as file:
+    reader = PyPDF2.PdfReader(file)
+    writer = PyPDF2.PdfWriter()
+    
+    for page_num in range(len(reader.pages)):
+        writer.add_page(reader.pages[page_num])
+
+    writer.encrypt('your_password')
+
+    with open('encrypted_sample.pdf', 'wb') as output_file:
+        writer.write(output_file)
