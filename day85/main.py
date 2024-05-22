@@ -10,7 +10,7 @@ parser.add_argument("Output", help="Name to save the downloaded file")
 
 # Parse the arguments
 args = parser.parse_args()
-
+ 
 # Print the arguments (for debugging purposes)
 print(f"URL: {args.URL}")
 print(f"Output: {args.Output}")
