@@ -20,7 +20,8 @@
 #     print(i,data['articles'][i]['description'])
 #     i=i+1
 
-# import requests 
+
+import requests 
 
 # API_KEY = "2537c7d5154e4f02846929e5b064e6b4"
 # url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
@@ -29,22 +30,39 @@
 # data = response.json()
 
 # articles = data['articles']
-# for i, article in enumerate(articles, start=1):
-#     print(f"{i}. Title: {article['title']}")
-#     print("   Description:", article['description'])
+# for article in articles:
+#     print("Title:", article['title'])
+#     print("Description:", article['description'])
 #     print()
 
+# import requests
+# import json
+# API_KEY = "2537c7d5154e4f02846929e5b064e6b4"
 
-import requests 
+# url=f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
 
-API_KEY = "2537c7d5154e4f02846929e5b064e6b4"
-url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
+# r=requests.get(url)
+# data=r.json()
+# articles=data['articles']
+# i=1
+# for (article) in   articles:
+    
+#     print(i,"title : \n",article['title'])
+#     print("Description : \n",article['description'])
+#     i+=1   
 
-response = requests.get(url)
-data = response.json()
 
-articles = data['articles']
-for article in articles:
-    print("Title:", article['title'])
-    print("Description:", article['description'])
-    print()
+import requests
+import json
+API_KEY='2537c7d5154e4f02846929e5b064e6b4'
+url=f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
+r=requests.get(url)
+data=json.loads(r.content) # or data= r.json()
+articles=data['articles']
+
+for i,article in enumerate(articles,start=1):
+    print(f"{i} Tile : \n \t{article["title"]}" )
+    print(f"Description : \n \t{ article["description"]}")
+    
+
+
