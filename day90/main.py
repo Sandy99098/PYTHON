@@ -8,7 +8,7 @@
 # import requests 
 # import json
 
-# API_KEY = "2537c7d5154e4f02846929e5b064e6b4"
+# API_KEY = "#"
 # url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
 
 # r = requests.get(url)
@@ -23,7 +23,7 @@
 
 import requests 
 
-# API_KEY = "2537c7d5154e4f02846929e5b064e6b4"
+# API_KEY = "#"
 # url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
 
 # response = requests.get(url)
@@ -37,7 +37,7 @@ import requests
 
 # import requests
 # import json
-# API_KEY = "2537c7d5154e4f02846929e5b064e6b4"
+# API_KEY = "#"
 
 # url=f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
 
@@ -54,7 +54,7 @@ import requests
 
 import requests
 import json
-API_KEY='2537c7d5154e4f02846929e5b064e6b4'
+API_KEY='#'
 url=f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
 r=requests.get(url)
 data=json.loads(r.content) # or data= r.json()
